@@ -1,0 +1,29 @@
+
+
+<div class="container">
+    <button class="button is-primary" (click)="logCharactersList()">Log Characters</button>
+</div>
+<section id="title" class="section">
+    <div class="container">
+      <h1 class="title">Characters</h1>
+      <h2 class="subtitle">
+        A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
+      </h2>
+    </div>
+</section>
+<section class="section">
+    <div class="container list-layout" >
+        <div *ngFor="let character of characters.results">
+            <app-characters-card [character]="character"></app-characters-card>
+        </div>
+    </div>
+</section>
+
+
+<nav class="pagination" role="navigation" aria-label="pagination">
+    <div class="container">
+        <a type="button" href="#title" class="pagination-previous" (click)="prevtPage()">Previous</a>
+        <a type="button" href="#title" class="pagination-next" (click)="nextPage()">Next page</a>
+    </div>
+    
+</nav>
