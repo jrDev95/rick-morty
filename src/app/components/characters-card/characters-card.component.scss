@@ -4,3 +4,17 @@
     min-height: 350px;
     margin: 16px;
 }
+
+.media-left {
+    display: none;
+}
+
+@media (max-width: 425px){
+    .media-left{
+        display: block;
+    }
+
+    .card-image {
+        display: none;
+    }
+}

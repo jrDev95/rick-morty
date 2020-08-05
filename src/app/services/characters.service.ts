@@ -16,14 +16,17 @@ export class CharactersService {
   ) { }
 
   initCharacters(): any {
-    console.log('getCharacters')
     const res = this.http.get('https://rickandmortyapi.com/api/character/?page=1');
     res.subscribe(res => this.characters.next(res));
   }
 
   paginationGetCharacters(pagination: string) {
-    console.log(pagination);
     const res = this.http.get(pagination);
+    res.subscribe(res => this.characters.next(res));
+  }
+
+  filterCharacter(filterData: any){
+    const res = this.http.get(`https://rickandmortyapi.com/api/character/?${filterData.name.value !== "" ? `name=${filterData.name.value.toLowerCase()}` : "" }${filterData.species.value !== "" ? `&species=${filterData.species.value}` : "" }${filterData.gender.value !== "" ? `&gender=${filterData.gender.value}` : "" }${filterData.status.value !== "" ? `&status=${filterData.status.value}` : "" } `);
     res.subscribe(res => this.characters.next(res));
   }
 }

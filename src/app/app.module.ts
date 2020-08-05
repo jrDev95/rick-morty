@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http'
+import { ReactiveFormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,6 +11,7 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { CharactersListComponent } from './components/characters-list/characters-list.component';
 import { CharactersCardComponent } from './components/characters-card/characters-card.component';
 import { CharactersComponent } from './pages/characters/characters.component';
+import { ShowFiltersComponent } from './components/show-filters/show-filters.component';
 
 @NgModule({
   declarations: [
@@ -19,12 +21,14 @@ import { CharactersComponent } from './pages/characters/characters.component';
     FooterComponent,
     CharactersListComponent,
     CharactersCardComponent,
-    CharactersComponent
+    CharactersComponent,
+    ShowFiltersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

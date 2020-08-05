@@ -31,12 +31,16 @@ export class CharactersListComponent implements OnInit {
   nextPage() {
     if(!!this.characters.info.next) {
       this.characterService.paginationGetCharacters(this.characters.info.next);
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+      this.page++
     }
   }
 
   prevtPage() {
     if(!!this.characters.info.prev) {
       this.characterService.paginationGetCharacters(this.characters.info.prev);
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+      this.page--
     }
   }
 

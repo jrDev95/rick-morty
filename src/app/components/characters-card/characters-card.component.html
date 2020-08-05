@@ -7,8 +7,8 @@
     <div class="card-content">
       <div class="media">
         <div class="media-left">
-          <figure class="image is-48x48">
-            <img src="{{ character.image }}" alt="Placeholder image">
+          <figure class="image is-96x96 ">
+            <img class="is-rounded" src="{{ character.image }}" alt="Placeholder image">
           </figure>
         </div>
         <div class="media-content">
@@ -17,9 +17,9 @@
       </div>
   
       <div class="content">
-        <p>Gender: {{ character.gender }}</p>
-        <p>Species: {{ character.species }}</p>
-        <p>Status: {{ character.status }}</p>
+        <p><b>Gender: </b>{{ character.gender }}</p>
+        <p><b>Species: </b>{{ character.species }}</p>
+        <p><b>Status: </b>{{ character.status }}</p>
       </div>
       <footer class="card-footer">
         <a href="#" class="card-footer-item">Details</a>

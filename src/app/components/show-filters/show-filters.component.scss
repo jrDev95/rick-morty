@@ -1,0 +1,21 @@
+.show-filters-button {
+    margin: 24px;
+}
+
+.filters-active {
+    display: block;
+}
+
+.filters-hidden {
+    display: none;
+}
+
+.character-filter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.control {
+    width: 250px;
+}

@@ -6,9 +6,7 @@
 <section id="title" class="section">
     <div class="container">
       <h1 class="title">Characters</h1>
-      <h2 class="subtitle">
-        A simple container to divide your page into <strong>sections</strong>, like the one you're currently reading
-      </h2>
+            <app-show-filters></app-show-filters>
     </div>
 </section>
 <section class="section">
@@ -18,12 +16,10 @@
         </div>
     </div>
 </section>
-
-
-<nav class="pagination" role="navigation" aria-label="pagination">
+<nav class="pagination pb-4" role="navigation" aria-label="pagination">
     <div class="container">
-        <a type="button" href="#title" class="pagination-previous" (click)="prevtPage()">Previous</a>
-        <a type="button" href="#title" class="pagination-next" (click)="nextPage()">Next page</a>
+        <a type="button" class="button  pagination-previous" (click)="prevtPage()">Previous</a>
+        <span class="is-size-3 pl-4 pr-4">{{ page }}</span>
+        <a type="button" class="button pagination-next" (click)="nextPage()">Next page</a>
     </div>
-    
 </nav>

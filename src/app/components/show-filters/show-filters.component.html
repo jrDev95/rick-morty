@@ -1,0 +1,31 @@
+<div class="show-filters-button">
+    <button class="button is-primary" (click)="showFilters()">Filters</button>
+</div>
+
+<div [ngClass]="{'filters-active': showFiltersValue, 'filters-hidden': !showFiltersValue}">
+    <div class="character-filter">
+        <div class="control">
+            <input class="input" type="search" placeholder="Name" [formControl]="formState.name">
+        </div>
+        <div class="select mx-5">
+            <select name="species" [formControl]="formState.species">
+                <option value="">Species</option>
+                <option *ngFor="let kind of species" value="{{kind.value}}" >{{kind.name}}</option>
+            </select>
+        </div>
+        <div class="select mx-5">
+            <select name="gender" [formControl]="formState.gender">
+                <option value="">Gender</option>
+                <option *ngFor="let gender of genders" value="{{gender.value}}" >{{gender.name}}</option>
+            </select>
+        </div>
+        <div class="select mx-5">
+            <select name="status"[formControl]="formState.status">
+                <option value="">Status</option>
+                <option *ngFor="let state of status" value="{{state.value}}" >{{state.name}}</option>
+            </select>
+        </div>
+        <button class="button is-primary mx-5" (click)="filterCharacter()">Search</button>
+    </div>
+    
+</div>
