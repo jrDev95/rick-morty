@@ -12,6 +12,8 @@ import { CharactersListComponent } from './components/characters-list/characters
 import { CharactersCardComponent } from './components/characters-card/characters-card.component';
 import { CharactersComponent } from './pages/characters/characters.component';
 import { ShowFiltersComponent } from './components/show-filters/show-filters.component';
+import { DetailsComponent } from './pages/details/details.component';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ShowFiltersComponent } from './components/show-filters/show-filters.com
     CharactersListComponent,
     CharactersCardComponent,
     CharactersComponent,
-    ShowFiltersComponent
+    ShowFiltersComponent,
+    DetailsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
