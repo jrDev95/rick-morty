@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  showMenu : boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  mobileMenu() {
+    console.log(this.showMenu)
+    this.showMenu = !this.showMenu;
   }
 
 }

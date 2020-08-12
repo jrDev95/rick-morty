@@ -1,18 +1,18 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="https://bulma.io">
+      <a class="navbar-item" [routerLink]="['']">
         <img src="../../../../assets/rick-logo.png" width="28" height="28">
         <h1 class="is-size-4">Rick and Morty</h1>
       </a>
   
-      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample" (click)="mobileMenu()">
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
         <span aria-hidden="true"></span>
       </a>
     </div>
   
-    <div id="navbarBasicExample" class="navbar-menu">
+    <div id="navbarBasicExample" class="navbar-menu" [ngClass]="{'is-active': showMenu}">
       <div class="navbar-start">
         <a [routerLink]="['']" class="navbar-item">
           Home

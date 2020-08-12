@@ -1,8 +1,4 @@
 
-
-<div class="container">
-    <button class="button is-primary" (click)="logCharactersList()">Log Characters</button>
-</div>
 <section id="title" class="section">
     <div class="container">
       <h1 class="title">Characters</h1>
@@ -18,8 +14,7 @@
 </section>
 <nav class="pagination pb-4" role="navigation" aria-label="pagination">
     <div class="container">
-        <a type="button" class="button  pagination-previous" (click)="prevtPage()">Previous</a>
-        <span class="is-size-3 pl-4 pr-4">{{ page }}</span>
-        <a type="button" class="button pagination-next" (click)="nextPage()">Next page</a>
+        <a *ngIf="!!this.characters.info.prev" type="button" class="button  pagination-previous" (click)="prevtPage()">Previous</a>
+        <a *ngIf="!!this.characters.info.next"type="button" class="button pagination-next" (click)="nextPage()">Next page</a>
     </div>
 </nav>

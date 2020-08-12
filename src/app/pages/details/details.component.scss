@@ -1,0 +1,19 @@
+.details-header {
+    background-color: black;
+    height: auto;
+    color: white;
+    padding-top: 52px;
+    padding-bottom: 52px;
+    
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.header-img {
+    height: 280px;
+    width: 280px;
+}

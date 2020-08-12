@@ -9,7 +9,6 @@ import { CharactersService } from '../../services/characters.service';
 export class CharactersListComponent implements OnInit {
 
   characters: any;
-  page: number = 1;
 
   constructor( 
     private characterService: CharactersService 
@@ -24,15 +23,12 @@ export class CharactersListComponent implements OnInit {
     this.characterService.initCharacters();
   }
 
-  logCharactersList() {
-    console.log(this.characters);
-  }
+
 
   nextPage() {
     if(!!this.characters.info.next) {
       this.characterService.paginationGetCharacters(this.characters.info.next);
       document.body.scrollTop = document.documentElement.scrollTop = 0;
-      this.page++
     }
   }
 
@@ -40,7 +36,6 @@ export class CharactersListComponent implements OnInit {
     if(!!this.characters.info.prev) {
       this.characterService.paginationGetCharacters(this.characters.info.prev);
       document.body.scrollTop = document.documentElement.scrollTop = 0;
-      this.page--
     }
   }
 

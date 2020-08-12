@@ -14,6 +14,8 @@ import { CharactersComponent } from './pages/characters/characters.component';
 import { ShowFiltersComponent } from './components/show-filters/show-filters.component';
 import { DetailsComponent } from './pages/details/details.component';
 import { AboutComponent } from './pages/about/about.component';
+import { EpisodeCardComponent } from './components/episode-card/episode-card.component';
+import { EpisodeListComponent } from './components/episode-list/episode-list.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { AboutComponent } from './pages/about/about.component';
     CharactersComponent,
     ShowFiltersComponent,
     DetailsComponent,
-    AboutComponent
+    AboutComponent,
+    EpisodeCardComponent,
+    EpisodeListComponent
   ],
   imports: [
     BrowserModule,
